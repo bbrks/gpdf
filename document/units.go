@@ -197,4 +197,17 @@ var (
 	Letter = Size{Width: 612, Height: 792}
 	// Legal is the US Legal page size (8.5" x 14").
 	Legal = Size{Width: 612, Height: 1008}
+	// Tabloid is the US Tabloid page size (11" x 17").
+	Tabloid = Size{Width: 792, Height: 1224}
+	// Executive is the US Executive page size (7.25" x 10.5").
+	Executive = Size{Width: 522, Height: 756}
+	// Statement is the US Statement / Half Letter page size (5.5" x 8.5").
+	Statement = Size{Width: 396, Height: 612}
+	// JuniorLegal is the US Junior Legal page size (5" x 8").
+	JuniorLegal = Size{Width: 360, Height: 576}
+
+	// Envelope10 is the US #10 commercial envelope size (4.125" x 9.5").
+	Envelope10 = Size{Width: 297, Height: 684}
+	// EnvelopeMonarch is the US Monarch (No. 7¾) envelope size (3.875" x 7.5").
+	EnvelopeMonarch = Size{Width: 279, Height: 540}
 )

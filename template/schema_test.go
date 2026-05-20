@@ -62,6 +62,14 @@ func TestParsePageSize(t *testing.T) {
 		{"C5", document.C5},
 		{"c6", document.C6},
 		{"DL", document.DL},
+		{"Tabloid", document.Tabloid},
+		{"Executive", document.Executive},
+		{"Statement", document.Statement},
+		{"junior-legal", document.JuniorLegal},
+		{"Junior-Legal", document.JuniorLegal},
+		{"envelope-10", document.Envelope10},
+		{"Monarch", document.EnvelopeMonarch},
+		{"envelope-monarch", document.EnvelopeMonarch},
 	}
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {

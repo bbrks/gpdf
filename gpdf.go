@@ -87,8 +87,16 @@ var (
 	DL = document.DL
 
 	// US paper sizes.
-	Letter = document.Letter
-	Legal  = document.Legal
+	Letter      = document.Letter
+	Legal       = document.Legal
+	Tabloid     = document.Tabloid
+	Executive   = document.Executive
+	Statement   = document.Statement
+	JuniorLegal = document.JuniorLegal
+
+	// US envelopes.
+	Envelope10      = document.Envelope10
+	EnvelopeMonarch = document.EnvelopeMonarch
 )
 
 // Re-export QR code option functions for convenience.
