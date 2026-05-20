@@ -142,10 +142,57 @@ type Rectangle struct {
 
 // Predefined page sizes expressed in PDF points (1/72 inch).
 var (
-	// A4 is the ISO A4 page size (210mm x 297mm).
-	A4 = Size{Width: 595.28, Height: 841.89}
+	// A0 is the ISO A0 page size (841mm x 1189mm).
+	A0 = Size{Width: 2383.94, Height: 3370.39}
+	// A1 is the ISO A1 page size (594mm x 841mm).
+	A1 = Size{Width: 1683.78, Height: 2383.94}
+	// A2 is the ISO A2 page size (420mm x 594mm).
+	A2 = Size{Width: 1190.55, Height: 1683.78}
 	// A3 is the ISO A3 page size (297mm x 420mm).
 	A3 = Size{Width: 841.89, Height: 1190.55}
+	// A4 is the ISO A4 page size (210mm x 297mm).
+	A4 = Size{Width: 595.28, Height: 841.89}
+	// A5 is the ISO A5 page size (148mm x 210mm).
+	A5 = Size{Width: 419.53, Height: 595.28}
+	// A6 is the ISO A6 page size (105mm x 148mm).
+	A6 = Size{Width: 297.64, Height: 419.53}
+	// A7 is the ISO A7 page size (74mm x 105mm).
+	A7 = Size{Width: 209.76, Height: 297.64}
+	// A8 is the ISO A8 page size (52mm x 74mm).
+	A8 = Size{Width: 147.40, Height: 209.76}
+
+	// B0 is the ISO B0 page size (1000mm x 1414mm).
+	B0 = Size{Width: 2834.65, Height: 4008.19}
+	// B1 is the ISO B1 page size (707mm x 1000mm).
+	B1 = Size{Width: 2004.09, Height: 2834.65}
+	// B2 is the ISO B2 page size (500mm x 707mm).
+	B2 = Size{Width: 1417.32, Height: 2004.09}
+	// B3 is the ISO B3 page size (353mm x 500mm).
+	B3 = Size{Width: 1000.63, Height: 1417.32}
+	// B4 is the ISO B4 page size (250mm x 353mm).
+	B4 = Size{Width: 708.66, Height: 1000.63}
+	// B5 is the ISO B5 page size (176mm x 250mm).
+	B5 = Size{Width: 498.90, Height: 708.66}
+	// B6 is the ISO B6 page size (125mm x 176mm).
+	B6 = Size{Width: 354.33, Height: 498.90}
+	// B7 is the ISO B7 page size (88mm x 125mm).
+	B7 = Size{Width: 249.45, Height: 354.33}
+	// B8 is the ISO B8 page size (62mm x 88mm).
+	B8 = Size{Width: 175.75, Height: 249.45}
+
+	// C3 is the ISO C3 envelope size (324mm x 458mm); holds an unfolded B4 sheet.
+	C3 = Size{Width: 918.43, Height: 1298.27}
+	// C4 is the ISO C4 envelope size (229mm x 324mm); holds an unfolded A4 sheet.
+	C4 = Size{Width: 649.13, Height: 918.43}
+	// C5 is the ISO C5 envelope size (162mm x 229mm); holds A4 folded once.
+	C5 = Size{Width: 459.21, Height: 649.13}
+	// C6 is the ISO C6 envelope size (114mm x 162mm); holds A4 folded twice.
+	C6 = Size{Width: 323.15, Height: 459.21}
+	// C7 is the ISO C7 envelope size (81mm x 114mm); holds A4 folded three times.
+	C7 = Size{Width: 229.61, Height: 323.15}
+	// DL is the ISO DL envelope size (110mm x 220mm), the standard business envelope.
+	DL = Size{Width: 311.81, Height: 623.62}
+
 	// Letter is the US Letter page size (8.5" x 11").
 	Letter = Size{Width: 612, Height: 792}
 	// Legal is the US Legal page size (8.5" x 14").

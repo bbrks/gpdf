@@ -56,8 +56,37 @@ var (
 
 // Re-export commonly used page sizes for convenience.
 var (
-	A4     = document.A4
-	A3     = document.A3
+	// ISO A series.
+	A0 = document.A0
+	A1 = document.A1
+	A2 = document.A2
+	A3 = document.A3
+	A4 = document.A4
+	A5 = document.A5
+	A6 = document.A6
+	A7 = document.A7
+	A8 = document.A8
+
+	// ISO B series.
+	B0 = document.B0
+	B1 = document.B1
+	B2 = document.B2
+	B3 = document.B3
+	B4 = document.B4
+	B5 = document.B5
+	B6 = document.B6
+	B7 = document.B7
+	B8 = document.B8
+
+	// ISO C envelopes + DL.
+	C3 = document.C3
+	C4 = document.C4
+	C5 = document.C5
+	C6 = document.C6
+	C7 = document.C7
+	DL = document.DL
+
+	// US paper sizes.
 	Letter = document.Letter
 	Legal  = document.Legal
 )

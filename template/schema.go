@@ -256,20 +256,42 @@ func parseValue(s string) (document.Value, error) {
 	return document.Pt(v), nil
 }
 
+// pageSizes maps canonical lowercase page-size names to their document.Size.
+var pageSizes = map[string]document.Size{
+	"a0":     document.A0,
+	"a1":     document.A1,
+	"a2":     document.A2,
+	"a3":     document.A3,
+	"a4":     document.A4,
+	"a5":     document.A5,
+	"a6":     document.A6,
+	"a7":     document.A7,
+	"a8":     document.A8,
+	"b0":     document.B0,
+	"b1":     document.B1,
+	"b2":     document.B2,
+	"b3":     document.B3,
+	"b4":     document.B4,
+	"b5":     document.B5,
+	"b6":     document.B6,
+	"b7":     document.B7,
+	"b8":     document.B8,
+	"c3":     document.C3,
+	"c4":     document.C4,
+	"c5":     document.C5,
+	"c6":     document.C6,
+	"c7":     document.C7,
+	"dl":     document.DL,
+	"letter": document.Letter,
+	"legal":  document.Legal,
+}
+
 // parsePageSize converts a page size name to document.Size.
 func parsePageSize(s string) (document.Size, error) {
-	switch strings.ToLower(strings.TrimSpace(s)) {
-	case "a4":
-		return document.A4, nil
-	case "a3":
-		return document.A3, nil
-	case "letter":
-		return document.Letter, nil
-	case "legal":
-		return document.Legal, nil
-	default:
-		return document.Size{}, fmt.Errorf("unknown page size: %q", s)
+	if size, ok := pageSizes[strings.ToLower(strings.TrimSpace(s))]; ok {
+		return size, nil
 	}
+	return document.Size{}, fmt.Errorf("unknown page size: %q", s)
 }
 
 // namedColors maps color name strings to their pdf.Color values.

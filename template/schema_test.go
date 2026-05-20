@@ -56,6 +56,12 @@ func TestParsePageSize(t *testing.T) {
 		{"A3", document.A3},
 		{"Letter", document.Letter},
 		{"legal", document.Legal},
+		{"A0", document.A0},
+		{"a8", document.A8},
+		{"B5", document.B5},
+		{"C5", document.C5},
+		{"c6", document.C6},
+		{"DL", document.DL},
 	}
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {
@@ -387,7 +393,7 @@ func TestBuildFromSchema_WithOptions(t *testing.T) {
 
 func TestBuildFromSchema_InvalidPageSize(t *testing.T) {
 	schema := &Schema{
-		Page: SchemaPage{Size: "B5"},
+		Page: SchemaPage{Size: "NotAPaperSize"},
 		Body: []SchemaRow{},
 	}
 	if _, err := buildFromSchema(schema, nil); err == nil {
