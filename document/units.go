@@ -134,6 +134,18 @@ type Size struct {
 	Width, Height float64
 }
 
+// Landscape returns the size in landscape orientation.
+// If the size is already landscape, the receiver is returned unchanged,
+// making the call idempotent.
+//
+//	gpdf.WithPageSize(gpdf.A4.Landscape())
+func (s Size) Landscape() Size {
+	if s.Width >= s.Height {
+		return s
+	}
+	return Size{Width: s.Height, Height: s.Width}
+}
+
 // Rectangle represents an axis-aligned rectangle defined by its origin
 // (top-left corner in layout coordinates) and dimensions.
 type Rectangle struct {
